@@ -4,7 +4,7 @@ GameOver.prototype = {
 
   	create: function(){
 
-			this.game.stage.backgroundColor = '479cde';
+			this.game.stage.backgroundColor = '3a3d40';
 
 			this.quit = this.game.input.keyboard.addKey(Phaser.Keyboard.ESC);
 			this.resume = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);

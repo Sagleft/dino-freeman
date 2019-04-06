@@ -16,7 +16,7 @@ Main.prototype = {
 		this.tileHeight = this.game.cache.getImage('tile').height;	
 		this.boxHeight = this.game.cache.getImage('box').height;
 
-		this.game.stage.backgroundColor = '479cde';
+		this.game.stage.backgroundColor = 'f7f7f7';
 		
 
 		this.game.physics.startSystem(Phaser.Physics.ARCADE);
@@ -146,7 +146,7 @@ Main.prototype = {
 
 		this.player = this.game.add.sprite(this.game.world.width/5, this.game.world.height - 
 			(this.tileHeight*2), 'player');
-		this.player.scale.setTo(4, 4);
+		this.player.scale.setTo(1.33, 1.33);
 		this.player.anchor.setTo(0.5, 1.0);
 		this.game.physics.arcade.enable(this.player);
 		this.player.body.gravity.y = 2200;
@@ -165,6 +165,7 @@ Main.prototype = {
 		this.scoreLabel = this.game.add.text(this.game.world.centerX, 70, "0", { font: scoreFont, fill: "#fff" });
 		this.scoreLabel.anchor.setTo(0.5, 0.5);
 		this.scoreLabel.align = 'center';
+		this.scoreLabel.color = '2c2c2e';
 		this.game.world.bringToTop(this.scoreLabel);
 
 		this.highScore = this.game.add.text(this.game.world.centerX * 1.6, 70, "0", { font: scoreFont, fill: "#fff" });
@@ -174,25 +175,21 @@ Main.prototype = {
 
 		if (window.localStorage.getItem('HighScore') == null) {
 			this.highScore.setText(0);
+			this.highScore.color = '2c2c2e';
 			this.highScore.setText(window.localStorage.setItem('HighScore', 0));
 		}
 		else {
 			this.highScore.setText(window.localStorage.getItem('HighScore'));
 		}
 		// this.scoreLabel.bringToTop()
-
 	},
 
 	incrementScore: function () {
-
-
 		score += 1;
 		this.scoreLabel.setText(score);
 		this.game.world.bringToTop(this.scoreLabel);
 		this.highScore.setText("HS: " + window.localStorage.getItem('HighScore'));
 		this.game.world.bringToTop(this.highScore);
-
-
 	},
 
 	gameOver: function(){

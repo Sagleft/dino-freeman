@@ -6,7 +6,7 @@ Preload.prototype = {
 		this.game.load.image('tile', 'assets/tile.png');
 		this.game.load.image('box', 'assets/box.png');
 		
-		this.game.load.spritesheet('player', 'assets/player.png', 24, 24, 9, -2);
+		this.game.load.spritesheet('player', 'assets/player.png', 72, 72, 9, -2);
 		
 
 	},
