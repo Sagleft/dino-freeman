@@ -165,7 +165,7 @@ Main.prototype = {
 		this.scoreLabel = this.game.add.text(this.game.world.centerX, 70, "0", { font: scoreFont, fill: "#fff" });
 		this.scoreLabel.anchor.setTo(0.5, 0.5);
 		this.scoreLabel.align = 'center';
-		this.scoreLabel.color = '2c2c2e';
+		this.scoreLabel.color = 'gray';
 		this.game.world.bringToTop(this.scoreLabel);
 
 		this.highScore = this.game.add.text(this.game.world.centerX * 1.6, 70, "0", { font: scoreFont, fill: "#fff" });
@@ -175,7 +175,7 @@ Main.prototype = {
 
 		if (window.localStorage.getItem('HighScore') == null) {
 			this.highScore.setText(0);
-			this.highScore.color = '2c2c2e';
+			this.highScore.color = 'gray';
 			this.highScore.setText(window.localStorage.setItem('HighScore', 0));
 		}
 		else {
