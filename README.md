@@ -1,8 +1,6 @@
 # A clone of the classic dinosaur game
 
-Play the game here - [Live demo](https://aveeksaha.gitlab.io/runny/) 
-
-This is the source code for the tutorial - [Making the Chrome dinosaur game with Phaser](https://aveeksaha.gitlab.io/post/chrome-dinosaur-game-tutorial-with-phaser/)
+Play the game here - [Live demo](https://sagleft.github.io/dino-freeman/)
 
 # Instructions
 Just clone this repository on to your local web server, and then go to `localhost/<the folder you cloned it in>` in the browser
